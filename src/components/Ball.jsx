@@ -9,6 +9,7 @@ const Ball = ({ randomBall, player }) => {
     setBallVal(randomBall);
     setIsHidden(!isHidden);
   };
+
   return (
     <>
       <Typography

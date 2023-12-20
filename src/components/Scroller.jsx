@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 const Scroller = ({ onNumOfPlayersChange }) => {
   const [currentSlide, setCurrentSlide] = useState(0); // State to store the current slide index
+  const playersRange = Array.from({ length: 14 }, (_, index) => index + 1);
 
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
@@ -24,24 +25,16 @@ const Scroller = ({ onNumOfPlayersChange }) => {
       showStatus={false}
       sx={{ marginTop: "3rem" }}
     >
-      <Typography variant="h2" gutterBottom sx={{ marginTop: "3rem" }}>
-        1
-      </Typography>
-      <Typography variant="h2" gutterBottom sx={{ marginTop: "3rem" }}>
-        2
-      </Typography>
-      <Typography variant="h2" gutterBottom sx={{ marginTop: "3rem" }}>
-        3
-      </Typography>
-      <Typography variant="h2" gutterBottom sx={{ marginTop: "3rem" }}>
-        4
-      </Typography>
-      <Typography variant="h2" gutterBottom sx={{ marginTop: "3rem" }}>
-        5
-      </Typography>
-      <Typography variant="h2" gutterBottom sx={{ marginTop: "3rem" }}>
-        6
-      </Typography>
+      {playersRange.map((number) => (
+        <Typography
+          variant="h2"
+          gutterBottom
+          sx={{ marginTop: "3rem" }}
+          key={number}
+        >
+          {number}
+        </Typography>
+      ))}
     </Carousel>
   );
 };
