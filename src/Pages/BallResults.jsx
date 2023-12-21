@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom"; // Import Link from react-ro
 import { useState } from "react";
 import Ball from "../components/Ball";
 
-const RandomBall = () => {
+const PlayersAmount = () => {
   const { numOfPlayers } = useParams();
 
   const getRandomBalls = (playersLength) => {
@@ -27,30 +27,30 @@ const RandomBall = () => {
       }}
     >
       <Typography variant="h2" gutterBottom sx={{ marginTop: "6rem" }}>
-        Random Ball
+        Random Balls
       </Typography>
       <div>
-        {/* Render a div for each random ball */}
         {getRandomBalls(numOfPlayers).map((ball, index) => (
           <Ball key={index} randomBall={ball} player={`${index + 1}`} />
         ))}
       </div>
-      <Link to="/players">
-        <Button
-          variant="outlined"
-          sx={{
-            borderRadius: 28,
-            width: "12rem",
-            height: "4rem",
-            color: "primary.main",
-            marginTop: "33rem",
-          }}
-        >
-          Start
-        </Button>
-      </Link>
+      <Button
+        variant="outlined"
+        sx={{
+          fontSize: "1.2rem",
+          borderRadius: 28,
+          width: "12rem",
+          height: "4rem",
+          color: "primary.main",
+          marginTop: "2rem",
+        }}
+        component={Link} // Use the Link component from react-router-dom
+        to="/players" // Specify the path you want to link to
+      >
+        Back
+      </Button>
     </Box>
   );
 };
 
-export default RandomBall;
+export default PlayersAmount;

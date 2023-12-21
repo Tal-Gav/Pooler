@@ -1,0 +1,62 @@
+.portfolio-experiment {
+  background: transparent;
+  color: #ffffff;
+}
+
+.portfolio-experiment .experiment-title {
+  outline: none;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Roboto", monospace;
+  min-height: 10vw;
+  max-width: 80vw;
+  min-width: 10vw;
+  display: inline-block;
+}
+
+.portfolio-experiment .experiment-title,
+.portfolio-experiment .experiment-title * {
+  animation: cray 6s infinite steps(50);
+}
+
+@keyframes cray {
+  2% {
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+  }
+  4% {
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: none;
+  }
+  6% {
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: line-through;
+    text-transform: uppercase;
+  }
+  8% {
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+  10% {
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  12% {
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+  }
+  /* Repeat the pattern for other percentages */
+}
+
+/* Add more keyframes as per the SCSS loop */
