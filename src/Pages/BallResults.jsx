@@ -1,11 +1,11 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { Link, useParams } from "react-router-dom"; // Import Link from react-router-dom
-import { useState } from "react";
 import Ball from "../components/Ball";
 
-const PlayersAmount = () => {
+const BallResults = () => {
   const { numOfPlayers } = useParams();
 
   const getRandomBalls = (playersLength) => {
@@ -53,4 +53,4 @@ const PlayersAmount = () => {
   );
 };
 
-export default PlayersAmount;
+export default BallResults;

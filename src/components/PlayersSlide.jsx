@@ -23,7 +23,7 @@ const PlayersSlide = ({ onPlayersAmountChange }) => {
       showThumbs={false}
       showIndicators={false}
       showStatus={false}
-      sx={{ marginTop: "3rem" }}
+      width={"50vh"}
     >
       {playersRange.map((number) => (
         <Typography
